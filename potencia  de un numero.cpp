@@ -1,36 +1,30 @@
-/*programa que calcule la potecia de n de un numero x (n es un numero natural)*/
+/*1.- programa que calcule la potencia de n de un numero x (n es un numero natural)*/
 #include <iostream>
 #include <windows.h>
 using namespace std;
-
-int p(int,int);
+int potencia(int,int);
 
 int main(){
 	SetConsoleOutputCP(CP_UTF8);
-	
-	int num, potencia;
+	int n, e,p;
 	cout<<"\n\n----------POTENCIA DE UN NUMERO---------\n\n";
 	cout<<"\n\t\tx²\n\n";
-	cout<<"Ingrese el numero(x): "; cin>>num;
-	cout<<"Ingrese la potencia del numero(y): "; cin>>potencia;
-	if(potencia<0){
+	cout<<"Ingrese el numero(x): "; cin>>n;
+	cout<<"Ingrese la potencia del numero(y): "; cin>>e;
+	if(e<0){
 		cout<<"\nERROR\n";
 		return 0;
 	}
 	cout<<"\n";
-	cout<<"RESPUESTA: "<<p(num,potencia);
-
+	p=potencia(n,e),
+	cout<<"RESPUESTA: "<<p;
 	return 0;
 }
-
-int p(int x, int y){
+int potencia(int x, int y){
 	 
 	 if(y==0){
-	 	
 	 	return 1;
 	 }else{
-	 	return x * p(x,y-1);
+	 	return x * potencia(x,y-1);
 	 }
-	
-	
 }

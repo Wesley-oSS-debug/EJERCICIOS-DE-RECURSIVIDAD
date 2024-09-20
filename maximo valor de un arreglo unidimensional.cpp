@@ -7,7 +7,7 @@ int buscar(int[], int);
 int main(){
 	
 	int num;
-	int array[]={3,5,9,3,7,2,1,0,5,12,556,23};
+	int array[]={556,5,9,3,7,2,1,0,5,12,45,23};
 	int tam=sizeof(array)/sizeof(array[0]);
 	cout<<"\n\n\t------Programa recursivo que busque el maximo valor de un arreglo unidimensional-----\n\n";
 	cout<<"\nARRAY={3,5,9,3,7,2,1}\n";
